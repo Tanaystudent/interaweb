@@ -1,0 +1,18 @@
+.post-type-selector {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.post-type-selector button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.post-type-selector button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,13 @@
+.post-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #0056b3;
+}
+
+  
