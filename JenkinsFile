@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+    
+    tools {
+        nodejs 'node' 
+
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from the repository
+                git branch: 'main', url: 'https://github.com/Tanaystudent/interaweb.git'
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                // Install Node.js and npm
+                sh 'npm install'
+                sh 'npm i -g vercel'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // Build the React application
+                sh 'npm run build'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Run tests
+                sh 'npm test'
+            }
+        }
+         stage('Release') {
+            steps {
+                sh 'vercel --token **Token** -y'
+                
+            }
+        }
+    }
+}
