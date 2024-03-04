@@ -33,6 +33,7 @@ function QuestionForm() {
   onChange={(e) => setTags(e.target.value)}
 />
       <button>Post</button>
+      <button>Not Post</button>
     </div>
   );
 }
